@@ -1,0 +1,23 @@
+pipeline{
+    agent any
+    stages{
+        stage("git){
+            when{
+                branch "develop"
+            }
+            steps{
+                echo "hello world"
+
+            }
+        }
+        stage("maven"){
+            when{
+                branch "master"
+            }
+            steps{
+                echo "hello world"
+
+            }
+        }
+    }
+}
